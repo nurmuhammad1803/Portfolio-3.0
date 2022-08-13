@@ -1,0 +1,24 @@
+/* logo animation */
+.logo::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .logo:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .logo:hover{
+    color: #fff;
+  }
+  .logo::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #000201;
+    z-index: -1;
+    transition: transform .3s;
+    transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+  }
